@@ -213,7 +213,7 @@ kubeConfig:
 # Change this if youd like to expose Spinnaker outside the cluster
 ingress:
   enabled: true
-  host: spinnaker.wurm.opsmx.net
+  host: spinnaker-mahesh.argo.ninja-test.opsmx.org
   annotations:
     ingress.kubernetes.io/ssl-redirect: 'true'
     kubernetes.io/ingress.class: nginx
@@ -221,11 +221,11 @@ ingress:
   tls:
   - secretName: -tls
     hosts:
-      - spinnaker.wurm.opsmx.net
+      - spinnaker-mahesh.argo.ninja-test.opsmx.org
 
 ingressGate:
   enabled: true
-  host: gate-spinnaker.wurm.opsmx.net
+  host: spinnaker-maheshgate.argo.ninja-test.opsmx.org
   annotations:
     ingress.kubernetes.io/ssl-redirect: 'true'
     kubernetes.io/ingress.class: nginx
@@ -233,7 +233,7 @@ ingressGate:
   tls:
   - secretName: -tls
     hosts:
-      - gate-spinnaker.wurm.opsmx.net
+      - spinnaker-maheshgate.argo.ninja-test.opsmx.org
 
 # spinnakerFeatureFlags is a list of Spinnaker feature flags to enable
 # Ref: https://www.spinnaker.io/reference/halyard/commands/#hal-config-features-edit
